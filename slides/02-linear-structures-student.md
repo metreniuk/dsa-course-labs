@@ -9,8 +9,7 @@
 Start with `[4, 7, 2, 9]`.
 
 1. How does the computer find index `2`?
-2. What changes when we remove the first value and keep the order?
-3. What can happen when we append to a full dynamic array?
+2. What happens when we remove the first value?
 
 
 <br><br><br><br><br><br>
@@ -28,20 +27,16 @@ Assume `length > 0`. Keep the removed value, then shift left.
 **Python**
 
 ```python
+values = [4, 7, 2, 9]
+length = len(values)
+
 value = values[0]
 for i in range(1, length):
     values[i - 1] = values[i]
 length -= 1
-```
 
-**C**
-
-```c
-int32_t value = values[0];
-for (size_t i = 1; i < length; i++) {
-    values[i - 1] = values[i];
-}
-length--;
+print("Removed:", value)
+print(values[:length])
 ```
 
 ```text
@@ -54,9 +49,42 @@ New length = 3
 
 - Indexed access calculates one address: **`O(1)`**.
 - Front removal shifts `n - 1` values: **`O(n)`**.
-- A full-array append can copy `n` values: **`O(n)` worst case**.
 
-Spare capacity helps append. It does not remove the shifts at the front.
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Removing the first array value: C
+
+Start with `[4, 7, 2, 9]`. Remove `4`, then print the remaining values.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void) {
+    int32_t values[] = {4, 7, 2, 9};
+    size_t length = sizeof values / sizeof values[0];
+
+    int32_t value = values[0];
+    for (size_t i = 1; i < length; i++) {
+        values[i - 1] = values[i];
+    }
+    length--;
+
+    printf("Removed: %d\n", (int)value);
+    for (size_t i = 0; i < length; i++) {
+        printf("%d ", (int)values[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+```
 
 <br><br><br><br><br><br>
 
@@ -96,17 +124,9 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
-```
 
-**C**
-
-```c
-#include <stdint.h>
-
-struct Node {
-    int32_t value;
-    struct Node *next;
-};
+node = Node(4)
+print(node.value)
 ```
 
 - `value` stores the number. `next` links to the next node.
@@ -125,6 +145,35 @@ For the C structure, see [CS50: Linked Lists](https://cs50.harvard.edu/x/notes/5
 
 <br><br><br><br><br><br>
 
+## A singly linked list: C
+
+Define a node, create one with value `4`, then print its value.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+int main(void) {
+    struct Node node = {4, NULL};
+    printf("%d\n", (int)node.value);
+
+    return 0;
+}
+```
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
 ## A NodeList stores head and tail
 
 **Use one container for the whole list. We call our type `NodeList`.**
@@ -132,25 +181,18 @@ For the C structure, see [CS50: Linked Lists](https://cs50.harvard.edu/x/notes/5
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
 class NodeList:
     def __init__(self):
         self.head = None
         self.tail = None
 
 items = NodeList()
-```
-
-**C**
-
-```c
-#include <stddef.h>
-
-struct NodeList {
-    struct Node *head;
-    struct Node *tail;
-};
-
-struct NodeList items = {NULL, NULL};
+print(items.head is None, items.tail is None)
 ```
 
 - A `Node` stores one value and one next link.
@@ -159,6 +201,40 @@ struct NodeList items = {NULL, NULL};
 - In list diagrams, `head` and `tail` mean these fields in `items`.
 
 Source: [Open Data Structures, Section 3.1: Singly Linked Lists](https://opendatastructures.org/ods-python/3_1_SLList_Singly_Linked_Li.html).
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## A NodeList stores head and tail: C
+
+Create an empty list. The program prints `1 1`: both end links are `NULL`.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    printf("%d %d\n", items.head == NULL, items.tail == NULL);
+
+    return 0;
+}
+```
 
 <br><br><br><br><br><br>
 
@@ -242,13 +318,72 @@ Order: 0x1000 -> 0x3000 -> 0x2000 -> 0x5000 -> null
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
 node = Node(5)
+print(node.value)
 ```
 
-**C: a helper used in the next examples**
+- `node.value` is `5`. `node.next` is `None`.
+- Python manages node memory for us.
+- The next slide creates the same value in C.
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Create one node: C
+
+Create a local node with value `5`, then print its value.
+
+- A local node usually uses the **stack**. No `malloc` or `free` is needed.
+- It is valid until execution leaves its block. Do not use its address after that.
+
+**C: a local variable inside `main`**
 
 ```c
+#include <stdio.h>
+#include <stdint.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+int main(void) {
+    struct Node node = {5, NULL};
+    printf("%d\n", (int)node.value);
+
+    return 0;
+}
+```
+
+Source: [CS50: Memory](https://cs50.harvard.edu/x/2026/notes/4/#memory).
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Create a node on the heap
+
+The later C examples use this helper to create nodes that can outlive a function call.
+
+```c
+#include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
 
 struct Node *new_node(int32_t value) {
     struct Node *node = malloc(sizeof *node);
@@ -259,12 +394,19 @@ struct Node *new_node(int32_t value) {
     node->next = NULL;
     return node;
 }
+
+int main(void) {
+    struct Node *node = new_node(5);
+    printf("%d\n", (int)node->value);
+    free(node);
+
+    return 0;
+}
 ```
 
 - In C, call `new_node(5)` to create the same node.
 - `malloc` reserves memory. C code must later release it with `free`.
-- Python manages node memory for us.
-- Our C examples stop with `exit(EXIT_FAILURE)` on allocation failure or an empty read or removal. Python raises an exception.
+- This C helper stops with `exit(EXIT_FAILURE)` on allocation failure.
 
 <br><br><br><br><br><br>
 
@@ -274,28 +416,33 @@ struct Node *new_node(int32_t value) {
 
 ## Build the same list
 
-Create a `NodeList`, then connect its nodes. Use the C `new_node` helper from earlier.
+Create a `NodeList`, then connect its nodes. Each program includes all definitions and prints the list.
 
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class NodeList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
 items = NodeList()
 items.head = Node(4)
 items.head.next = Node(7)
 items.head.next.next = Node(2)
 items.head.next.next.next = Node(9)
 items.tail = items.head.next.next.next
-```
 
-**C**
-
-```c
-struct NodeList items = {NULL, NULL};
-items.head = new_node(4);
-items.head->next = new_node(7);
-items.head->next->next = new_node(2);
-items.head->next->next->next = new_node(9);
-items.tail = items.head->next->next->next;
+current = items.head
+while current is not None:
+    print(current.value, end=" ")
+    current = current.next
+print()
 ```
 
 - `items.head` refers to the node with `4`. `items.tail` refers to the node with `9`.
@@ -303,6 +450,68 @@ items.tail = items.head->next->next->next;
 - Assigning a node reference or pointer does not copy that node.
 
 These links give the same order as `[4, 7, 2, 9]`.
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Build the same list: C
+
+Create and connect the nodes. Output: `4 7 2 9`.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+struct Node *new_node(int32_t value) {
+    struct Node *node = malloc(sizeof *node);
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    node->value = value;
+    node->next = NULL;
+    return node;
+}
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    items.head = new_node(4);
+    items.head->next = new_node(7);
+    items.head->next->next = new_node(2);
+    items.head->next->next->next = new_node(9);
+    items.tail = items.head->next->next->next;
+
+    for (struct Node *current = items.head; current != NULL;
+         current = current->next) {
+        printf("%d ", (int)current->value);
+    }
+    printf("\n");
+
+    while (items.head != NULL) {
+        struct Node *next = items.head->next;
+        free(items.head);
+        items.head = next;
+    }
+    items.tail = NULL;
+
+    return 0;
+}
+```
 
 <br><br><br><br><br><br>
 
@@ -337,27 +546,33 @@ We want the sum: `4 + 7 + 2 + 9`.
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class NodeList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+items = NodeList()
+items.head = Node(4)
+items.head.next = Node(7)
+items.head.next.next = Node(2)
+items.head.next.next.next = Node(9)
+items.tail = items.head.next.next.next
+
 current = items.head
 total = 0
 while current is not None:
     total += current.value
     current = current.next
+
+print(total)
 ```
 
-**C**
-
-```c
-#include <stddef.h>
-
-struct Node *current = items.head;
-int total = 0;
-while (current != NULL) {
-    total += current->value;
-    current = current->next;
-}
-```
-
-C uses `->` to access a field through a pointer. `NULL` marks the end.
+Output: `22`.
 
 ```text
 Value read       4    7    2    9
@@ -367,6 +582,73 @@ Running total    4   11   13   22
 `current` moves through the nodes. `items.head` and `items.tail` stay unchanged.
 
 Source: [CS50, Week 5: Linked Lists](https://cs50.harvard.edu/x/notes/5/#linked-lists).
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Traversal: follow each next link: C
+
+Follow each link and add the values. Output: `22`.
+
+C uses `->` to access a field through a pointer. `NULL` marks the end.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+struct Node *new_node(int32_t value) {
+    struct Node *node = malloc(sizeof *node);
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    node->value = value;
+    node->next = NULL;
+    return node;
+}
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    items.head = new_node(4);
+    items.head->next = new_node(7);
+    items.head->next->next = new_node(2);
+    items.head->next->next->next = new_node(9);
+    items.tail = items.head->next->next->next;
+
+    struct Node *current = items.head;
+    int total = 0;
+    while (current != NULL) {
+        total += current->value;
+        current = current->next;
+    }
+
+    printf("%d\n", total);
+
+    while (items.head != NULL) {
+        struct Node *next = items.head->next;
+        free(items.head);
+        items.head = next;
+    }
+    items.tail = NULL;
+
+    return 0;
+}
+```
 
 <br><br><br><br><br><br>
 
@@ -423,22 +705,34 @@ New node         [5 | None]
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class NodeList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+items = NodeList()
+items.head = Node(4)
+items.head.next = Node(7)
+items.head.next.next = Node(2)
+items.head.next.next.next = Node(9)
+items.tail = items.head.next.next.next
+
 node = Node(5)
 node.next = items.head
 items.head = node
 if items.tail is None:
     items.tail = node
-```
 
-**C**
-
-```c
-struct Node *node = new_node(5);
-node->next = items.head;
-items.head = node;
-if (items.tail == NULL) {
-    items.tail = node;
-}
+current = items.head
+while current is not None:
+    print(current.value, end=" ")
+    current = current.next
+print()
 ```
 
 ```text
@@ -457,6 +751,75 @@ After     head -> [5] -> [4] -> [7] -> [2] -> [9] -> None
 
 <br><br><br><br><br><br>
 
+## Insertion at the head: C
+
+Insert `5` at the head. Output: `5 4 7 2 9`.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+struct Node *new_node(int32_t value) {
+    struct Node *node = malloc(sizeof *node);
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    node->value = value;
+    node->next = NULL;
+    return node;
+}
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    items.head = new_node(4);
+    items.head->next = new_node(7);
+    items.head->next->next = new_node(2);
+    items.head->next->next->next = new_node(9);
+    items.tail = items.head->next->next->next;
+
+    struct Node *node = new_node(5);
+    node->next = items.head;
+    items.head = node;
+    if (items.tail == NULL) {
+        items.tail = node;
+    }
+
+    for (struct Node *current = items.head; current != NULL;
+         current = current->next) {
+        printf("%d ", (int)current->value);
+    }
+    printf("\n");
+
+    while (items.head != NULL) {
+        struct Node *next = items.head->next;
+        free(items.head);
+        items.head = next;
+    }
+    items.tail = NULL;
+
+    return 0;
+}
+```
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
 ## Insertion after a known node
 
 Start again with `4 -> 7 -> 2 -> 9` in `items`. `previous` refers to its node with `7`.
@@ -464,22 +827,35 @@ Start again with `4 -> 7 -> 2 -> 9` in `items`. `previous` refers to its node wi
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class NodeList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+items = NodeList()
+items.head = Node(4)
+items.head.next = Node(7)
+items.head.next.next = Node(2)
+items.head.next.next.next = Node(9)
+items.tail = items.head.next.next.next
+
+previous = items.head.next
 node = Node(5)
 node.next = previous.next
 previous.next = node
 if items.tail is previous:
     items.tail = node
-```
 
-**C**
-
-```c
-struct Node *node = new_node(5);
-node->next = previous->next;
-previous->next = node;
-if (items.tail == previous) {
-    items.tail = node;
-}
+current = items.head
+while current is not None:
+    print(current.value, end=" ")
+    current = current.next
+print()
 ```
 
 ```text
@@ -491,6 +867,76 @@ After     4 -> 7 -> 5 -> 2 -> 9 -> None
 - **Find the position first:** `O(n)` in the worst case.
 - Save the old next link before replacing it.
 - If `previous` was the tail, the new node becomes the tail.
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Insertion after a known node: C
+
+`previous` points to the node with `7`. Output: `4 7 5 2 9`.
+
+**C**
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+struct Node *new_node(int32_t value) {
+    struct Node *node = malloc(sizeof *node);
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    node->value = value;
+    node->next = NULL;
+    return node;
+}
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    items.head = new_node(4);
+    items.head->next = new_node(7);
+    items.head->next->next = new_node(2);
+    items.head->next->next->next = new_node(9);
+    items.tail = items.head->next->next->next;
+
+    struct Node *previous = items.head->next;
+    struct Node *node = new_node(5);
+    node->next = previous->next;
+    previous->next = node;
+    if (items.tail == previous) {
+        items.tail = node;
+    }
+
+    for (struct Node *current = items.head; current != NULL;
+         current = current->next) {
+        printf("%d ", (int)current->value);
+    }
+    printf("\n");
+
+    while (items.head != NULL) {
+        struct Node *next = items.head->next;
+        free(items.head);
+        items.head = next;
+    }
+    items.tail = NULL;
+
+    return 0;
+}
+```
 
 
 <br><br><br><br><br><br>
@@ -527,32 +973,111 @@ Actual allocation time can vary.
 
 ## Append with a tail reference
 
-Add `9` to `items`. An empty `NodeList` already has both end links set to `None` or `NULL`.
+Start with `4 -> 7 -> 2` in `items`. Add `9`. For an empty list, both end links start as `None` or `NULL`.
 
 **Python**
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class NodeList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+items = NodeList()
+items.head = Node(4)
+items.head.next = Node(7)
+items.head.next.next = Node(2)
+items.tail = items.head.next.next
+
 node = Node(9)
 if items.head is None:
     items.head = node
 else:
     items.tail.next = node
 items.tail = node
+
+current = items.head
+while current is not None:
+    print(current.value, end=" ")
+    current = current.next
+print()
 ```
+
+The new tail's next link is empty. No existing node moves.
+
+<br><br><br><br><br><br>
+
+---
+
+<br><br><br><br><br><br>
+
+## Append with a tail reference: C
+
+Append `9` to `4 -> 7 -> 2`. Output: `4 7 2 9`.
 
 **C**
 
 ```c
-struct Node *node = new_node(9);
-if (items.head == NULL) {
-    items.head = node;
-} else {
-    items.tail->next = node;
-}
-items.tail = node;
-```
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
 
-The new tail's next link is empty. No existing node moves.
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+struct Node *new_node(int32_t value) {
+    struct Node *node = malloc(sizeof *node);
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    node->value = value;
+    node->next = NULL;
+    return node;
+}
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    items.head = new_node(4);
+    items.head->next = new_node(7);
+    items.head->next->next = new_node(2);
+    items.tail = items.head->next->next;
+
+    struct Node *node = new_node(9);
+    if (items.head == NULL) {
+        items.head = node;
+    } else {
+        items.tail->next = node;
+    }
+    items.tail = node;
+
+    for (struct Node *current = items.head; current != NULL;
+         current = current->next) {
+        printf("%d ", (int)current->value);
+    }
+    printf("\n");
+
+    while (items.head != NULL) {
+        struct Node *next = items.head->next;
+        free(items.head);
+        items.head = next;
+    }
+    items.tail = NULL;
+
+    return 0;
+}
+```
 
 <br><br><br><br><br><br>
 
@@ -610,6 +1135,23 @@ Source: [Open Data Structures, Section 3.1.2: Summary](https://opendatastructure
 Reject an empty list. With one node, clear both references.
 
 ```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class NodeList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+items = NodeList()
+items.head = Node(4)
+items.head.next = Node(7)
+items.head.next.next = Node(2)
+items.head.next.next.next = Node(9)
+items.tail = items.head.next.next.next
+
 if items.head is None:
     raise IndexError("remove from empty list")
 if items.head is items.tail:
@@ -621,6 +1163,12 @@ else:
         previous = previous.next
     previous.next = None
     items.tail = previous
+
+current = items.head
+while current is not None:
+    print(current.value, end=" ")
+    current = current.next
+print()
 ```
 
 For several nodes, the loop finds the node just before the old tail.
@@ -636,22 +1184,70 @@ For several nodes, the loop finds the node just before the old tail.
 Use nodes made by `new_node`. Save the old tail so we can release it.
 
 ```c
-if (items.head == NULL) {
-    exit(EXIT_FAILURE);
-}
-struct Node *old_tail = items.tail;
-if (items.head == items.tail) {
-    items.head = NULL;
-    items.tail = NULL;
-} else {
-    struct Node *previous = items.head;
-    while (previous->next != items.tail) {
-        previous = previous->next;
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+struct Node {
+    int32_t value;
+    struct Node *next;
+};
+
+struct NodeList {
+    struct Node *head;
+    struct Node *tail;
+};
+
+struct Node *new_node(int32_t value) {
+    struct Node *node = malloc(sizeof *node);
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
     }
-    previous->next = NULL;
-    items.tail = previous;
+    node->value = value;
+    node->next = NULL;
+    return node;
 }
-free(old_tail);
+
+int main(void) {
+    struct NodeList items = {NULL, NULL};
+    items.head = new_node(4);
+    items.head->next = new_node(7);
+    items.head->next->next = new_node(2);
+    items.head->next->next->next = new_node(9);
+    items.tail = items.head->next->next->next;
+
+    if (items.head == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    struct Node *old_tail = items.tail;
+    if (items.head == items.tail) {
+        items.head = NULL;
+        items.tail = NULL;
+    } else {
+        struct Node *previous = items.head;
+        while (previous->next != items.tail) {
+            previous = previous->next;
+        }
+        previous->next = NULL;
+        items.tail = previous;
+    }
+    free(old_tail);
+
+    for (struct Node *current = items.head; current != NULL;
+         current = current->next) {
+        printf("%d ", (int)current->value);
+    }
+    printf("\n");
+
+    while (items.head != NULL) {
+        struct Node *next = items.head->next;
+        free(items.head);
+        items.head = next;
+    }
+    items.tail = NULL;
+
+    return 0;
+}
 ```
 
 Change the links before calling `free`. Never read the released node.
@@ -827,7 +1423,6 @@ FUNCTION add(a, b)
 
 **Which function returns first? What does the program print?**
 
-Source: [Runestone, Section 4.6: Stack Frames](https://runestone.academy/ns/books/published/pythonds3/Recursion/StackFramesImplementingRecursion.html).
 
 <br><br><br><br><br><br>
 

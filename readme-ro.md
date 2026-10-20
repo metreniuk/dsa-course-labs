@@ -16,7 +16,8 @@ Cursul folosește întrebări, diagrame și exemple mici pentru a te ajuta să:
 
 - [slides/](slides/): prezentări pentru studenți în engleză, cu exemple C în `slides/examples/`.
 - [slides-ro/](slides-ro/): prezentări pentru studenți în română, cu exemple C în `slides-ro/examples/`.
-- `labs/`: vom adăuga mai târziu lucrări de laborator și exerciții practice.
+- [labs/](labs/): lucrări de laborator și exerciții practice în engleză.
+- [labs-ro/](labs-ro/): lucrări de laborator și exerciții practice în română.
 
 Materialele în română păstrează majoritatea termenilor tehnici în engleză.
 
@@ -25,7 +26,14 @@ Materialele în română păstrează majoritatea termenilor tehnici în engleză
 | Lecție | Engleză | Română |
 | --- | --- | --- |
 | 1. Array-uri și analiza complexității | [Prezentare](slides/01-complexity-and-arrays-student.md) | [Prezentare](slides-ro/01-complexity-and-arrays-student-ro.md) |
-| 2. Linked lists, stacks și queues | [Prezentare](slides/02-linear-structures-student.md) | Încă nu este disponibilă |
+| 2. Linked lists, stacks și queues | [Prezentare](slides/02-linear-structures-student.md) | [Prezentare](slides-ro/02-linear-structures-student-ro.md) |
+
+## Laboratoare disponibile
+
+| Laborator | Engleză | Română |
+| --- | --- | --- |
+| 1. Array-uri | [Laborator](labs/01-arrays.md) | [Laborator](labs-ro/01-arrays-ro.md) |
+| 2. Linked lists | [Laborator](labs/02-linked-lists.md) | [Laborator](labs-ro/02-linked-lists-ro.md) |
 
 ## Cum folosești materialele
 
