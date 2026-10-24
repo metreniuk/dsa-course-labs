@@ -37,6 +37,7 @@ Romanian materials keep most technical terms in English.
 | 1. Arrays | [Lab](labs/01-arrays.md) | [Lab](labs-ro/01-arrays-ro.md) |
 | 2. Linked lists | [Lab](labs/02-linked-lists.md) | [Lab](labs-ro/02-linked-lists-ro.md) |
 | 3. Recursion, merge, and merge sort | [Lab](labs/03-sorting.md) | - |
+| 4. Quicksort and binary search | [Lab](labs/04-quicksort-and-search.md) | - |
 
 ## How to use the materials
 
