@@ -27,6 +27,8 @@ Romanian materials keep most technical terms in English.
 | --- | --- | --- |
 | 1. Arrays and complexity | [Slides](slides/01-complexity-and-arrays-student.md) | [Slides](slides-ro/01-complexity-and-arrays-student-ro.md) |
 | 2. Linked lists, stacks, and queues | [Slides](slides/02-linear-structures-student.md) | [Slides](slides-ro/02-linear-structures-student-ro.md) |
+| 3. Sorting, recursion, and merge sort | [Slides](slides/03-sorting-and-merge-sort-student.md) | - |
+| 4. QuickSort and binary search | [Slides](slides/04-quicksort-and-binary-search-student.md) | - |
 
 ## Available labs
 
@@ -34,6 +36,7 @@ Romanian materials keep most technical terms in English.
 | --- | --- | --- |
 | 1. Arrays | [Lab](labs/01-arrays.md) | [Lab](labs-ro/01-arrays-ro.md) |
 | 2. Linked lists | [Lab](labs/02-linked-lists.md) | [Lab](labs-ro/02-linked-lists-ro.md) |
+| 3. Recursion, merge, and merge sort | [Lab](labs/03-sorting.md) | - |
 
 ## How to use the materials
 
