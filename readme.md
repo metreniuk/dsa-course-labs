@@ -29,6 +29,8 @@ Romanian materials keep most technical terms in English.
 | 2. Linked lists, stacks, and queues | [Slides](slides/02-linear-structures-student.md) | [Slides](slides-ro/02-linear-structures-student-ro.md) |
 | 3. Sorting, recursion, and merge sort | [Slides](slides/03-sorting-and-merge-sort-student.md) | - |
 | 4. QuickSort and binary search | [Slides](slides/04-quicksort-and-binary-search-student.md) | - |
+| 5. HashMap and HashSet | [Slides](slides/05-hash-maps-and-sets-student.md) | [Slides](slides-ro/05-hash-maps-and-sets-student-ro.md) |
+| 6. Trees and Binary Search Trees | [Slides](slides/06-trees-and-binary-search-trees-student.md) | - |
 
 ## Available labs
 

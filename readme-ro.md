@@ -27,6 +27,7 @@ Materialele în română păstrează majoritatea termenilor tehnici în engleză
 | --- | --- | --- |
 | 1. Array-uri și analiza complexității | [Prezentare](slides/01-complexity-and-arrays-student.md) | [Prezentare](slides-ro/01-complexity-and-arrays-student-ro.md) |
 | 2. Linked lists, stacks și queues | [Prezentare](slides/02-linear-structures-student.md) | [Prezentare](slides-ro/02-linear-structures-student-ro.md) |
+| 5. HashMap și HashSet | [Prezentare](slides/05-hash-maps-and-sets-student.md) | [Prezentare](slides-ro/05-hash-maps-and-sets-student-ro.md) |
 
 ## Laboratoare disponibile
 

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="390" viewBox="0 0 900 390" role="img" aria-labelledby="title desc">
+<title id="title">Search height in two BST shapes</title>
+<desc id="desc">Both BSTs contain 1, 2, 3, 4, 6, 7, 9. The left tree branches and has height 2. The right tree is a chain of right children and has height 6.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker></defs>
+<rect width="900" height="390" rx="8" fill="#fff"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#0f172a">
+<text x="200" y="30" font-size="22">Short tree: height 2</text>
+<text x="665" y="30" font-size="22">Chain: height 6</text>
+<path d="M183.7,101.3 L118.4,166.6" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M216.3,101.3 L281.6,166.6" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M89.7,205.6 L61.6,261.7" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M110.3,205.6 L138.4,261.7" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M289.7,205.6 L261.6,261.7" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M310.3,205.6 L338.4,261.7" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M527.3,100.2 L539.5,110.9" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M576.3,143.2 L588.5,153.9" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M625.3,186.2 L637.5,196.9" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M674.3,229.2 L686.5,239.9" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M723.3,272.2 L735.5,282.9" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M772.3,315.2 L784.5,325.9" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<circle cx="200" cy="85" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="200" y="92" font-size="22">4</text>
+<circle cx="100" cy="185" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="100" y="192" font-size="22">2</text>
+<circle cx="300" cy="185" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="300" y="192" font-size="22">7</text>
+<circle cx="50" cy="285" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="50" y="292" font-size="22">1</text>
+<circle cx="150" cy="285" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="150" y="292" font-size="22">3</text>
+<circle cx="250" cy="285" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="250" y="292" font-size="22">6</text>
+<circle cx="350" cy="285" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="350" y="292" font-size="22">9</text>
+<circle cx="510" cy="85" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="510" y="92" font-size="22">1</text>
+<circle cx="559" cy="128" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="559" y="135" font-size="22">2</text>
+<circle cx="608" cy="171" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="608" y="178" font-size="22">3</text>
+<circle cx="657" cy="214" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="657" y="221" font-size="22">4</text>
+<circle cx="706" cy="257" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="706" y="264" font-size="22">6</text>
+<circle cx="755" cy="300" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="755" y="307" font-size="22">7</text>
+<circle cx="804" cy="343" r="23" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="804" y="350" font-size="22">9</text>
+<text x="200" y="353" font-size="18">At most 3 data nodes on a path</text>
+<text x="580" y="363" font-size="18">Each link goes to a right child</text>
+</g></svg>

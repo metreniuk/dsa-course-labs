@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="315" viewBox="0 0 400 315" role="img" aria-labelledby="title desc">
+<title id="title">BST search for 6</title>
+<desc id="desc">Root 4 has children 2 and 7. Node 2 has children 1 and 3. Node 7 has children 6 and 9. The search follows 4, 7, 6.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker><marker id="path-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="400" height="315" rx="8" fill="#ffffff"/>
+<path d="M182.3,62.7 L124.8,120.2" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="129.6" y="70.4" width="48" height="19" fill="#fff"/>
+<text x="153.6" y="83.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M217.7,62.7 L275.2,120.2" stroke="#1d4ed8" stroke-width="3" fill="none" marker-end="url(#path-arrow)"/>
+<rect x="222.4" y="70.4" width="48" height="19" fill="#fff"/>
+<text x="246.4" y="83.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">right</text>
+<path d="M92.5,161.6 L64.0,210.8" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M116.6,162.1 L142.0,210.2" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M284.3,162.6 L262.0,209.7" stroke="#1d4ed8" stroke-width="3" fill="none" marker-end="url(#path-arrow)"/>
+<rect x="249.1" y="165.1" width="48" height="19" fill="#fff"/>
+<text x="273.1" y="178.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M308.3,161.1 L340.0,211.3" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<circle cx="200" cy="45" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="200" y="51" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">4</text>
+<circle cx="105" cy="140" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="105" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">2</text>
+<circle cx="295" cy="140" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="295" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">7</text>
+<circle cx="50" cy="235" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="50" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">1</text>
+<circle cx="155" cy="235" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="155" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">3</text>
+<circle cx="250" cy="235" r="25" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="250" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">6</text>
+<circle cx="355" cy="235" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="355" y="241" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">9</text>
+<text x="200" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#334155">Target 6: 4 -&gt; 7 -&gt; 6</text>
+</svg>

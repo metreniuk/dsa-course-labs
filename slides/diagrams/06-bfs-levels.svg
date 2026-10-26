@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="365" viewBox="0 0 460 365" role="img" aria-labelledby="title desc">
+<title id="title">BFS levels</title>
+<desc id="desc">Root 4 has children 2 and 7. Node 2 has children 1 and 3. Node 7 has children 6 and 9. Blue badges show visit steps: 4, 2, 7, 1, 3, 6, 9.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker></defs>
+<rect width="460" height="365" fill="#fff"/>
+<rect x="80" y="25" width="370" height="80" rx="8" fill="#eff6ff"/>
+<text x="38" y="59" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#334155">Level</text>
+<text x="38" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#0f172a">0</text>
+<rect x="80" y="125" width="370" height="80" rx="8" fill="#f0fdf4"/>
+<text x="38" y="159" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#334155">Level</text>
+<text x="38" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#0f172a">1</text>
+<rect x="80" y="225" width="370" height="80" rx="8" fill="#f8fafc"/>
+<text x="38" y="259" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#334155">Level</text>
+<text x="38" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#0f172a">2</text>
+<path d="M242.1,83.8 L185.7,143.3" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M277.9,83.8 L334.3,143.3" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M152.5,187.8 L124.5,238.7" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M176.6,188.3 L201.6,238.2" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M344.3,188.7 L322.3,237.6" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M368.4,187.3 L399.6,239.3" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<circle cx="260" cy="65" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="260" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">4</text>
+<circle cx="281" cy="41" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="281" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">1</text>
+<circle cx="165" cy="165" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="165" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">2</text>
+<circle cx="186" cy="141" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="186" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">2</text>
+<circle cx="355" cy="165" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="355" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">7</text>
+<circle cx="376" cy="141" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="376" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">3</text>
+<circle cx="110" cy="265" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="110" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">1</text>
+<circle cx="131" cy="241" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="131" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">4</text>
+<circle cx="215" cy="265" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="215" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">3</text>
+<circle cx="236" cy="241" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="236" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">5</text>
+<circle cx="310" cy="265" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="310" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">6</text>
+<circle cx="331" cy="241" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="331" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">6</text>
+<circle cx="415" cy="265" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="415" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0f172a">9</text>
+<circle cx="436" cy="241" r="12" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+<text x="436" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff">7</text>
+<text x="230.0" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#1d4ed8">Blue badge = visit step</text>
+<text x="230.0" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#0f172a">4  2  7  1  3  6  9</text>
+</svg>

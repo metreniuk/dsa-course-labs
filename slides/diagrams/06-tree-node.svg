@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280" role="img" aria-labelledby="title desc">
+<title id="title">A new TreeNode</title>
+<desc id="desc">Node value 2, with left and right references set to None.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker><marker id="path-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="400" height="280" rx="8" fill="#ffffff"/>
+<path d="M182.3,82.7 L104.8,160.2" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="119.6" y="100.4" width="48" height="19" fill="#fff"/>
+<text x="143.6" y="113.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M217.7,82.7 L295.2,160.2" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="232.4" y="100.4" width="48" height="19" fill="#fff"/>
+<text x="256.4" y="113.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">right</text>
+<circle cx="200" cy="65" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="200" y="71" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">2</text>
+<rect x="52" y="161" width="66" height="38" rx="5" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="85" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">None</text>
+<rect x="282" y="161" width="66" height="38" rx="5" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="315" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">None</text>
+<text x="200" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#334155">No children: this node is a leaf.</text>
+</svg>

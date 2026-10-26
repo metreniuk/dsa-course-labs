@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="410" viewBox="0 0 450 410" role="img" aria-labelledby="title desc">
+<title id="title">Worst-case BST search</title>
+<desc id="desc">Each node has only a right child. Finding 9 visits all seven nodes.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="selected" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="450" height="410" rx="8" fill="#fff"/>
+<path d="M83.0,67.3 L94.8,78.6" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M133.0,115.3 L144.8,126.6" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M183.0,163.3 L194.8,174.6" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M233.0,211.3 L244.8,222.6" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M283.0,259.3 L294.8,270.6" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M333.0,307.3 L344.8,318.6" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<circle cx="65" cy="50" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="65" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">1</text>
+<circle cx="115" cy="98" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="115" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">2</text>
+<circle cx="165" cy="146" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="165" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">3</text>
+<circle cx="215" cy="194" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="215" y="201" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">4</text>
+<circle cx="265" cy="242" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="265" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">6</text>
+<circle cx="315" cy="290" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="315" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">7</text>
+<circle cx="365" cy="338" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="365" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">9</text>
+<text x="225" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#334155">Find 9: check all 7 nodes</text>
+</svg>
