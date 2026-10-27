@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="335" viewBox="0 0 760 335" role="img" aria-labelledby="title desc">
+<title id="title">Remove node 6 with one child</title>
+<desc id="desc">The left reference of 7 changes from 6 to 5. Node 9 is unchanged.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="selected" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="760" height="335" rx="8" fill="#fff"/>
+<path d="M169.4,89.5 L122.5,148.1" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="121.9" y="98.8" width="48" height="19" fill="#fff"/>
+<text x="145.9" y="111.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M200.6,89.5 L247.5,148.1" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="200.1" y="98.8" width="48" height="19" fill="#fff"/>
+<text x="224.1" y="111.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">right</text>
+<path d="M95.7,193.2 L75.4,244.0" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="61.6" y="198.6" width="48" height="19" fill="#fff"/>
+<text x="85.6" y="211.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M554.4,89.5 L507.5,148.1" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<rect x="506.9" y="98.8" width="48" height="19" fill="#fff"/>
+<text x="530.9" y="111.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M585.6,89.5 L632.5,148.1" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="585.1" y="98.8" width="48" height="19" fill="#fff"/>
+<text x="609.1" y="111.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">right</text>
+<path d="M353.0,150 L407.0,150" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="185" cy="70" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="185" y="77" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">7</text>
+<circle cx="105" cy="170" r="25" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="105" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">6</text>
+<circle cx="265" cy="170" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="265" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">9</text>
+<circle cx="65" cy="270" r="25" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="65" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">5</text>
+<circle cx="570" cy="70" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="570" y="77" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">7</text>
+<circle cx="490" cy="170" r="25" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="490" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">5</text>
+<circle cx="650" cy="170" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="650" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">9</text>
+<text x="185" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#334155">Before: remove 6</text>
+<text x="570" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#334155">After: keep child 5</text>
+<text x="380" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#334155">Only the subtree rooted at 7 is shown.</text>
+</svg>

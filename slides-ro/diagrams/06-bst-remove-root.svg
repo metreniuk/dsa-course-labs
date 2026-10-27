@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="365" viewBox="0 0 900 365" role="img" aria-labelledby="title desc">
+<title id="title">Remove root value 4 using its successor</title>
+<desc id="desc">Copy value 5 to the root. Remove the old successor node from the left of 7. The final values are 1, 2, 5, 7, 9.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="selected" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="900" height="365" rx="8" fill="#fff"/>
+<path d="M186.9,97.2 L125.3,155.7" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M223.1,97.2 L284.7,155.7" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M93.4,197.1 L68.0,245.2" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M293.4,197.1 L268.0,245.2" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<path d="M316.6,197.1 L342.0,245.2" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M661.9,97.2 L600.3,155.7" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M698.1,97.2 L759.7,155.7" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M568.4,197.1 L543.0,245.2" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M791.6,197.1 L817.0,245.2" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M423.0,150 L477.0,150" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="205" cy="80" r="25" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="205" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">4</text>
+<circle cx="105" cy="175" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="105" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">2</text>
+<circle cx="305" cy="175" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="305" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">7</text>
+<circle cx="55" cy="270" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="55" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">1</text>
+<circle cx="255" cy="270" r="25" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="255" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">5</text>
+<circle cx="355" cy="270" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="355" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">9</text>
+<circle cx="680" cy="80" r="25" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="680" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">5</text>
+<circle cx="580" cy="175" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="580" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">2</text>
+<circle cx="780" cy="175" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="780" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">7</text>
+<circle cx="530" cy="270" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="530" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">1</text>
+<circle cx="830" cy="270" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="830" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">9</text>
+<text x="205" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">Before: remove 4</text>
+<text x="680" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#334155">After: root value is 5</text>
+<text x="450" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#334155">Copy the value, then remove the old successor.</text>
+</svg>

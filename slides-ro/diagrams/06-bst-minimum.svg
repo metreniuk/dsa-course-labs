@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="295" viewBox="0 0 450 295" role="img" aria-labelledby="title desc">
+<title id="title">Minimum in the right subtree</title>
+<desc id="desc">Start at node 7. Its left child 5 has no left child. Return node 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="selected" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="450" height="295" rx="8" fill="#fff"/>
+<path d="M208.1,103.4 L133.9,184.4" fill="none" stroke="#1d4ed8" stroke-width="3" marker-end="url(#selected)"/>
+<rect x="147.0" y="123.9" width="48" height="19" fill="#fff"/>
+<text x="171.0" y="136.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">left</text>
+<path d="M241.9,103.4 L316.1,184.4" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="255.0" y="123.9" width="48" height="19" fill="#fff"/>
+<text x="279.0" y="136.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#334155">right</text>
+<circle cx="225" cy="85" r="25" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<text x="225" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">7</text>
+<circle cx="115" cy="205" r="25" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="115" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">5</text>
+<circle cx="335" cy="205" r="25" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text x="335" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">9</text>
+<text x="225" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#334155">Right subtree of 4</text>
+<text x="225" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#334155">5 has no left child: stop.</text>
+</svg>
