@@ -31,6 +31,7 @@ Romanian materials keep most technical terms in English.
 | 4. QuickSort and binary search | [Slides](slides/04-quicksort-and-binary-search-student.md) | - |
 | 5. HashMap and HashSet | [Slides](slides/05-hash-maps-and-sets-student.md) | [Slides](slides-ro/05-hash-maps-and-sets-student-ro.md) |
 | 6. Trees and Binary Search Trees | [Slides](slides/06-trees-and-binary-search-trees-student.md) | - |
+| 7. More tools for new problems | [Slides](slides/07-algorithm-patterns-and-specialized-structures-student.md) | - |
 
 ## Available labs
 
